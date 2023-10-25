@@ -17,21 +17,22 @@ public class Main {
         //decimalToBinaryクラスからconvert関数を呼び出す(メソッドを呼び出す)
         String binary = decimalToBinary.convert(decimal);
 
-            //正の数なら左シフト、負の数なら右シフト
-            System.out.print("シフトするビット数を入力してください（左シフトは正、右シフトは負の値）: ");
-            int shiftAmount = scanner.nextInt();
+        //シフトしたい桁を入力
+        //8以上を入力するとエラーになります
+        System.out.print("シフトするビット数を入力してください: ");
+        int shiftAmount = scanner.nextInt();
 
-            //インスタンス化
-            BinaryShift binaryShift = new BinaryShift();
-            //BinaryShiftクラスからshift関数の呼び出し(メソッドを呼び出す)
-            String shiftedBinary = binaryShift.shift(binary, shiftAmount);
+        //インスタンス化
+        BinaryShift binaryShift = new BinaryShift();
+        //BinaryShiftクラスからshift関数の呼び出し(メソッドを呼び出す)
+        String shiftedBinary = binaryShift.shift(binary, shiftAmount);
 
-            //インスタンス化
-            BinaryToDecimal binaryToDecimal = new BinaryToDecimal();
-            //BinaryToDecimal関数からconvert関数を呼び出す(メソッドを呼び出す)
-            int result = binaryToDecimal.convert(shiftedBinary);
-            //計算結果
-            System.out.println("シフト後の10進数: " + result);
+        //インスタンス化
+        BinaryToDecimal binaryToDecimal = new BinaryToDecimal();
+        //BinaryToDecimal関数からconvert関数を呼び出す(メソッドを呼び出す)
+        int result = binaryToDecimal.convert(shiftedBinary);
+        //計算結果
+        System.out.println("シフト後の10進数: " + result);
 
 
         scanner.close();

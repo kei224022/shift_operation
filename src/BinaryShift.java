@@ -11,8 +11,7 @@ class BinaryShift {
             // 左算術シフト(左論理シフトでも同じ？)
             shiftedBinary = binary.substring(shiftAmount) + "0".repeat(shiftAmount);
         } else {
-            // 右算術シフト
-            shiftedBinary = "0".repeat(-shiftAmount) + binary.substring(0, 8 + shiftAmount);
+            throw new Exception("正の整数を入力してください");
         }
         return shiftedBinary;
     }

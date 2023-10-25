@@ -8,7 +8,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //入力する数字は正の数
-        System.out.print("10進数の数字を入力してください: ");
+        //2進数は8桁までと制限しているため0〜255までにする
+        System.out.print("255以下の正の整数を入力してください: ");
         int decimal = scanner.nextInt();
 
         //インスタンス化

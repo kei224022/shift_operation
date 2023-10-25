@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
+        //入力する数字は正の数
         System.out.print("10進数の数字を入力してください: ");
         int decimal = scanner.nextInt();
 
@@ -15,7 +16,7 @@ public class Main {
         //decimalToBinaryクラスからconvert関数を呼び出す
         String binary = decimalToBinary.convert(decimal);
 
-        //256以上なら計算不可
+        //256以上または負の数なら計算不可
         if (binary.length() > 8) {
             System.out.println("エラー: 入力された数字は8桁の2進数に変換できません。");
         } else {

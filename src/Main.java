@@ -14,7 +14,7 @@ public class Main {
 
         //インスタンス化
         DecimalToBinary decimalToBinary = new DecimalToBinary();
-        //decimalToBinaryクラスからconvert関数を呼び出す
+        //decimalToBinaryクラスからconvert関数を呼び出す(メソッドを呼び出す)
         String binary = decimalToBinary.convert(decimal);
 
             //正の数なら左シフト、負の数なら右シフト
@@ -23,12 +23,12 @@ public class Main {
 
             //インスタンス化
             BinaryShift binaryShift = new BinaryShift();
-            //BinaryShiftクラスからshift関数の呼び出し
+            //BinaryShiftクラスからshift関数の呼び出し(メソッドを呼び出す)
             String shiftedBinary = binaryShift.shift(binary, shiftAmount);
 
             //インスタンス化
             BinaryToDecimal binaryToDecimal = new BinaryToDecimal();
-            //BinaryToDecimal関数からconvert関数を呼び出す
+            //BinaryToDecimal関数からconvert関数を呼び出す(メソッドを呼び出す)
             int result = binaryToDecimal.convert(shiftedBinary);
             //計算結果
             System.out.println("シフト後の10進数: " + result);

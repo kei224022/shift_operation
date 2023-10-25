@@ -20,7 +20,7 @@ public class Main {
         if (binary.length() > 8) {
             System.out.println("エラー: 入力された数字は8桁の2進数に変換できません。");
         } else {
-            //正の数なら乗算、負の数なら除算
+            //正の数なら左シフト、負の数なら右シフト
             System.out.print("シフトするビット数を入力してください（左シフトは正、右シフトは負の値）: ");
             int shiftAmount = scanner.nextInt();
 

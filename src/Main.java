@@ -17,10 +17,6 @@ public class Main {
         //decimalToBinaryクラスからconvert関数を呼び出す
         String binary = decimalToBinary.convert(decimal);
 
-        //256以上または負の数なら計算不可
-        if (binary.length() > 8) {
-            System.out.println("エラー: 入力された数字は8桁の2進数に変換できません。");
-        } else {
             //正の数なら左シフト、負の数なら右シフト
             System.out.print("シフトするビット数を入力してください（左シフトは正、右シフトは負の値）: ");
             int shiftAmount = scanner.nextInt();
@@ -36,7 +32,7 @@ public class Main {
             int result = binaryToDecimal.convert(shiftedBinary);
             //計算結果
             System.out.println("シフト後の10進数: " + result);
-        }
+
 
         scanner.close();
     }
